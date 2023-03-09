@@ -21,16 +21,16 @@ DATA = {
 }
 
 def recipe(request, a, b):
-    asdfg = {}
+    Ingredients = {}
     for c, d in dict.items(DATA):
         if c == a:
             for g, h in dict.items(d):
                 asdf = h * b
                 asd = {g:asdf}
-                asdfg.update(asd)
-    context = {a:asdfg}
-    print(context)
-    return render(request, 'calculator/index.html', context)
+                Ingredients.update(asd)
+    recipe = {'recipe':Ingredients}
+    print(recipe)
+    return render(request, 'calculator/index.html', recipe)
 
             
 
